@@ -12,21 +12,8 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Yuuki
-      </div>
-      <div class="message-date">
-        2021/3/6(土) 12:34:56
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        こんばんは！
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
+</div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
